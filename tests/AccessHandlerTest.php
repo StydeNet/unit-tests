@@ -2,17 +2,17 @@
 
 use Styde\AccessHandler as Access;
 use Styde\Authenticator as Auth;
+use Styde\SessionArrayDriver;
 use Styde\SessionFileDriver;
 use Styde\SessionManager as Session;
+use Styde\Stubs\AuthenticatorStub;
 
 class AccessHandlerTest extends PHPUnit_Framework_TestCase
 {
 
     public function test_grant_access()
     {
-        $driver = new SessionFileDriver();
-        $session = new Session($driver);
-        $auth = new Auth($session);
+        $auth = new AuthenticatorStub();
         $access = new Access($auth);
 
         $this->assertTrue(
@@ -22,9 +22,7 @@ class AccessHandlerTest extends PHPUnit_Framework_TestCase
 
     public function test_deny_access()
     {
-        $driver = new SessionFileDriver();
-        $session = new Session($driver);
-        $auth = new Auth($session);
+        $auth = new AuthenticatorStub();
         $access = new Access($auth);
 
         $this->assertFalse(

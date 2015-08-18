@@ -2,19 +2,17 @@
 
 namespace Styde;
 
-use Styde\Authenticator as Auth;
-
 class AccessHandler
 {
     /**
-     * @var \Styde\Authenticator
+     * @var \Styde\AuthenticatorInterface
      */
     protected $auth;
 
     /**
-     * @param \Styde\Authenticator $auth
+     * @param \Styde\AuthenticatorInterface $auth
      */
-    public function __construct(Auth $auth)
+    public function __construct(AuthenticatorInterface $auth)
     {
         $this->auth = $auth;
     }

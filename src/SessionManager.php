@@ -8,7 +8,7 @@ class SessionManager
     protected $driver;
     protected $data = array();
 
-    public function __construct(SessionFileDriver $driver)
+    public function __construct(SessionDriverInterface $driver)
     {
         $this->driver = $driver;
 
