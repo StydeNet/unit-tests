@@ -12,14 +12,18 @@ class AccessHandler
     /**
      * @param \Styde\AuthenticatorInterface $auth
      */
-    public function __construct(Authenticator $auth)
+    public function __construct(AuthenticatorInterface $auth)
     {
         $this->auth = $auth;
     }
 
-    public function check($role)
+    public function check($roles)
     {
-        return $this->auth->check() && $this->auth->user()->role === $role;
+        if (!is_array($roles)) {
+            $roles = explode('|', $roles);
+        }
+
+        return $this->auth->check() && in_array($this->auth->user()->role, $roles);
     }
 
 }

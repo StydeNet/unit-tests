@@ -12,14 +12,17 @@ class Authenticator implements AuthenticatorInterface
     protected $session;
 
     /**
+     * @var \Styde\User
+     */
+    protected $user;
+
+    /**
      * @param \Styde\SessionManager $session
      */
     public function __construct(Session $session)
     {
         $this->session = $session;
     }
-
-    protected static $user;
 
     public function check()
     {
