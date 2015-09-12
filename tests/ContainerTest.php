@@ -68,7 +68,9 @@ class ContainerTest extends PHPUnit_Framework_TestCase
     {
         $container = new Container();
 
-        $container->make('Norf');
+        $container->bind('norf', 'Norf');
+
+        $container->make('norf');
     }
 
 }
