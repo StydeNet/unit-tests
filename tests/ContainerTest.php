@@ -10,7 +10,7 @@ class ContainerTest extends PHPUnit_Framework_TestCase
     {
         $container = new Container();
 
-        $container->bind('key', function () {
+        $container->bind('key', function () s{
             return 'Object';
         });
 
@@ -71,6 +71,39 @@ class ContainerTest extends PHPUnit_Framework_TestCase
         $container->bind('norf', 'Norf');
 
         $container->make('norf');
+    }
+
+    public function test_container_make_with_arguments()
+    {
+        $container = new Container();
+
+        $this->assertInstanceOf(
+            MailDummy::class,
+            $container->make('MailDummy', ['url' => 'styde.net', 'key' => 'secret'])
+        );
+    }
+
+    public function exercise_test_container_make_with_default_arguments()
+    {
+        $container = new Container();
+
+        $this->assertInstanceOf(
+            MailDummy::class,
+            $container->make('MailDummy', ['url' => 'styde.net'])
+        );
+    }
+
+}
+
+class MailDummy {
+
+    private $url;
+    private $key;
+
+    public function __construct($url, $key = 'secret')
+    {
+        $this->url = $url;
+        $this->key = $key;
     }
 
 }

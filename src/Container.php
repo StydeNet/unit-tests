@@ -25,25 +25,29 @@ class Container
         $this->shared[$name] = $object;
     }
 
-    public function make($name)
+    public function make($name, array $arguments = array())
     {
         if (isset ($this->shared[$name]))
         {
             return $this->shared[$name];
         }
 
-        $resolver = $this->bindings[$name]['resolver'];
+        if (isset ($this->bindings[$name])) {
+            $resolver = $this->bindings[$name]['resolver'];
+        } else {
+            $resolver = $name;
+        }
 
         if ($resolver instanceof Closure) {
             $object = $resolver($this);
         } else {
-            $object = $this->build($resolver);
+            $object = $this->build($resolver, $arguments);
         }
 
         return $object;
     }
 
-    public function build($name)
+    public function build($name, array $arguments = array())
     {
         $reflection = new ReflectionClass($name);
 
@@ -59,21 +63,36 @@ class Container
 
         $constructorParameters = $constructor->getParameters(); //[ReflectionParameter]
 
-        $arguments = array();
+        $dependencies = array();
 
         foreach ($constructorParameters as $constructorParameter) {
 
+            $parameterName = $constructorParameter->getName();
+
+            if (isset ($arguments[$parameterName])) {
+                $dependencies[] = $arguments[$parameterName];
+                continue;
+            }
+
             try {
-                $parameterClassName = $constructorParameter->getClass()->getName();
+                $parameterClass = $constructorParameter->getClass();
             } catch(ReflectionException $e) {
                 throw new ContainerException("Unable to build [$name]: " . $e->getMessage(), null, $e);
             }
 
-            $arguments[] = $this->build($parameterClassName);
+            if ($parameterClass!=null) {
+                $parameterClassName = $parameterClass->getName();
+                $dependencies[] = $this->build($parameterClassName);
+            } else {
+
+
+
+                throw new ContainerException("Please provide the value of the parameter [$parameterName]");
+            }
         }
 
-        // new Foo($bar)
-        return $reflection->newInstanceArgs($arguments);
+        // new Foo($bar) or MailDummy('url', 'key')
+        return $reflection->newInstanceArgs($dependencies);
     }
 
 }
