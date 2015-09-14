@@ -10,7 +10,7 @@ class ContainerTest extends PHPUnit_Framework_TestCase
     {
         $container = new Container();
 
-        $container->bind('key', function () s{
+        $container->bind('key', function () {
             return 'Object';
         });
 
