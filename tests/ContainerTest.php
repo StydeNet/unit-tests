@@ -28,6 +28,18 @@ class ContainerTest extends PHPUnit_Framework_TestCase
         $this->assertSame($stdClass, $container->make('key'));
     }
 
+    public function test_singleton_instance()
+    {
+        $container = new Container();
+
+        $container->singleton('foo', 'Foo');
+
+        $this->assertSame(
+            $container->make('foo'),
+            $container->make('foo')
+        );
+    }
+
     public function test_bind_from_class_name()
     {
         $container = new Container();
