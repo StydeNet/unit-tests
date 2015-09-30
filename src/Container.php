@@ -10,8 +10,24 @@ use ReflectionException;
 class Container
 {
 
+    protected static $instance;
+
     protected $shared = [];
     protected $bindings = [];
+
+    public static function setInstance(Container $container)
+    {
+        static::$instance = $container;
+    }
+
+    public static function getInstance()
+    {
+        if (static::$instance == null) {
+            static::$instance = new static;
+        }
+
+        return static::$instance;
+    }
 
     public function bind($name, $resolver, $shared = false)
     {
@@ -94,7 +110,7 @@ class Container
 
             if ($parameterClass!=null) {
                 $parameterClassName = $parameterClass->getName();
-                $dependencies[] = $this->build($parameterClassName);
+                $dependencies[] = $this->make($parameterClassName);
             } else {
                 throw new ContainerException("Please provide the value of the parameter [$parameterName]");
             }

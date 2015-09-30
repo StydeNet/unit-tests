@@ -19,7 +19,7 @@ function view($template, array $vars = array())
 
 function abort404()
 {
-    $access = Container::getInstance()->access();
+    $access = Container::getInstance()->make('access');
 
     http_response_code(404);
     view('page404', compact('access'));

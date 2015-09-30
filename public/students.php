@@ -6,7 +6,7 @@ require(__DIR__.'/../bootstrap/start.php');
 
 function studentController()
 {
-    $access = Container::getInstance()->access();
+    $access = Container::getInstance()->make('access');
 
     if (!$access->check('student')) {
         abort404();
