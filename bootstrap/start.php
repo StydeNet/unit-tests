@@ -10,6 +10,8 @@ $whoops->register();
 
 $container = Styde\Container::getInstance();
 
+Styde\Facades\Facade::setContainer($container);
+
 $container->singleton('session', function ($app) {
     $data = array(
         'user_data' => array(
