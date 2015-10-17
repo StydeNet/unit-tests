@@ -1,5 +1,7 @@
 <?php
 
+use Styde\Application;
+
 require __DIR__ . '/../vendor/autoload.php';
 
 class_alias('Styde\Facades\Access', 'Access');
@@ -12,23 +14,12 @@ $container = Styde\Container::getInstance();
 
 Styde\Facades\Facade::setContainer($container);
 
-$container->singleton('session', function ($app) {
-    $data = array(
-        'user_data' => array(
-            'name' => 'Duilio',
-            'role' => 'teacher'
-        )
-    );
+$application = new Application($container);
 
-    $driver = new Styde\SessionArrayDriver($data);
+//$application->register();
 
-    return new Styde\SessionManager($driver);
-});
-
-$container->singleton(Styde\AuthenticatorInterface::class, function ($app) {
-    return new Styde\Authenticator($app->make('session'));
-});
-
-$container->singleton('access', function ($app) {
-    return $app->build(Styde\AccessHandler::class);
-});
+$application->registerProviders(array(
+    Styde\Providers\SessionProvider::class,
+    Styde\Providers\AuthenticatorProvider::class,
+    Styde\Providers\AuthorizationProvider::class
+));
