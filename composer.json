@@ -11,7 +11,14 @@
     "phpunit/phpunit": "^4.8",
     "mockery/mockery": "^0.9.4"
   },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../container"
+    }
+  ],
   "require": {
+    "styde/container": "dev-master",
     "filp/whoops": "^1.1"
   }
 }

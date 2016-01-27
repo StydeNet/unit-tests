@@ -4,6 +4,7 @@
 namespace Styde\Providers;
 
 use Styde\AccessHandler;
+use Styde\Container\Provider;
 
 class AuthorizationProvider extends Provider
 {

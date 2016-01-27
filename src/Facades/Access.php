@@ -2,6 +2,8 @@
 
 namespace Styde\Facades;
 
+use Styde\Container\Facade;
+
 class Access extends Facade
 {
 

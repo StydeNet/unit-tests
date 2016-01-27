@@ -1,6 +1,9 @@
 <?php
 
-use Styde\Application;
+use Styde\Container\Application;
+use Styde\Container\Facade;
+use Styde\Container\Container;
+use Styde\MyApplication;
 
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -10,13 +13,11 @@ $whoops = new \Whoops\Run;
 $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
 $whoops->register();
 
-$container = Styde\Container::getInstance();
+$container = Container::getInstance();
 
-Styde\Facades\Facade::setContainer($container);
+Facade::setContainer($container);
 
-$application = new Application($container);
-
-//$application->register();
+$application = new MyApplication($container);
 
 $application->registerProviders(array(
     Styde\Providers\SessionProvider::class,

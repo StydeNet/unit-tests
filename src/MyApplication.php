@@ -2,12 +2,9 @@
 
 namespace Styde;
 
+use Styde\Container\Application;
+
 class MyApplication extends Application
 {
-
-    protected function registerAccessHandler()
-    {
-        exit('Custom access handler');
-    }
 
 }

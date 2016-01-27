@@ -5,6 +5,7 @@ namespace Styde\Providers;
 
 use Styde\Authenticator;
 use Styde\AuthenticatorInterface;
+use Styde\Container\Provider;
 
 class AuthenticatorProvider extends Provider
 {

@@ -2,6 +2,7 @@
 
 namespace Styde\Providers;
 
+use Styde\Container\Provider;
 use Styde\SessionArrayDriver;
 use Styde\SessionManager;
 
