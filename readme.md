@@ -51,18 +51,21 @@ En esta tercera parte aprenderás a preparar tu paquete para compartirlo a la com
 
 #### Otros cursos
 
- -   [                        Primeros pasos con Laravel 5.*                    ](https://styde.net/curso-primeros-pasos-con-laravel-5/)
- -   [                        Curso básico de Eloquent ORM                    ](https://styde.net/curso-basico-de-eloquent-orm-con-laravel-5-1/)
- -   [                        Crea una aplicación con Laravel 5                    ](https://styde.net/curso-crea-aplicaciones-con-laravel-5/)
- -   [                        Curso de Laravel 5.1                    ](https://styde.net/curso-introductorio-laravel-5-1/)
- **Laravel y PHP avanzado**
- -   [                        Curso de administración de servidores para PHP y Laravel                    ](https://styde.net/curso-configuracion-administracion-de-servidores-php-laravel/)
- -   [                        Curso avanzado de Eloquent ORM                    ](https://styde.net/curso-avanzado-de-eloquent-orm/)
- -   [                        Crea componentes para PHP                    ](https://styde.net/curso-crea-componentes-para-php-y-laravel/)
- -   [                        Interfaces dinámicas con Laravel y jQuery                    ](https://styde.net/curso-de-interfaces-dinamicas-con-laravel-y-jquery/)
- **Otras tecnologías**
- -   [                        Curso de Vue.js                    ](https://styde.net/curso-de-vue-js/)
- -   [                        Curso de Gulp                    ](https://styde.net/curso-gulp-y-herramientas-de-automatizacion/)
+**Laravel desde cero**
+*   [                        Primeros pasos con Laravel 5.*                    ](https://styde.net/curso-primeros-pasos-con-laravel-5/)
+*   [                        Curso básico de Eloquent ORM                    ](https://styde.net/curso-basico-de-eloquent-orm-con-laravel-5-1/)
+*   [                        Crea una aplicación con Laravel 5                    ](https://styde.net/curso-crea-aplicaciones-con-laravel-5/)
+*   [                        Curso de Laravel 5.1                    ](https://styde.net/curso-introductorio-laravel-5-1/)
+
+**Laravel y PHP avanzado**
+*   [                        Curso de administración de servidores para PHP y Laravel                    ](https://styde.net/curso-configuracion-administracion-de-servidores-php-laravel/)
+*   [                        Curso avanzado de Eloquent ORM                    ](https://styde.net/curso-avanzado-de-eloquent-orm/)
+*   [                        Crea componentes para PHP                    ](https://styde.net/curso-crea-componentes-para-php-y-laravel/)
+*   [                        Interfaces dinámicas con Laravel y jQuery                    ](https://styde.net/curso-de-interfaces-dinamicas-con-laravel-y-jquery/)
+
+**Otras tecnologías**
+*   [                        Curso de Vue.js                    ](https://styde.net/curso-de-vue-js/)
+*   [                        Curso de Gulp                    ](https://styde.net/curso-gulp-y-herramientas-de-automatizacion/)
 
 #### Membresía
 
