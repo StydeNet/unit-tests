@@ -12,7 +12,7 @@ En este curso te enseñaremos desde conceptos claves que te permitirán dominar la
 
 En las siguientes lecciones aprenderás nuevas metodologías de desarrollo aplicable a cada uno de tus proyectos. A lo largo de esta serie verás paso a paso el proceso llevado a cabo para crear un componente completamente funcional, utilizando inyección de dependencias, pruebas de integración, manejo de Composer, PHPUnit y otros temas de nivel avanzado.
 
-**Parte 1: Conceptos fundamentales    **
+**Parte 1: Conceptos fundamentales**
 
 Antes de crear componentes es necesario aprender una serie de conceptos y herramientas, entre las que destacan las pruebas unitarias y la inyección de dependencias.
 
@@ -22,7 +22,7 @@ Antes de crear componentes es necesario aprender una serie de conceptos y herram
 4. [ Creación y uso de Interfaces y Stubs](https://styde.net/interfaces-y-stubs/) - 15:52
 5.  [Introducción a Mockery](https://styde.net/introduccion-a-mockery/)09:17
 
-**Parte 2: Inyección de dependencias    **
+**Parte 2: Inyección de dependencias**
 
 En esta segunda parte, aprenderemos desde cero el concepto y la implementación del patrón de inyección de dependencias, desde sus desventajas hasta la creación de nuestro propio contenedor de inyección de dependencias, similar al que tiene Laravel.
 
@@ -40,7 +40,7 @@ En esta segunda parte, aprenderemos desde cero el concepto y la implementación d
 17.  [Creación de una clase Facade genérica](https://styde.net/creacion-de-una-clase-facade-generica/) - 14:22
 18.  [Qué son y cómo implementar nuestros propios “Service Providers”](https://styde.net/que-son-y-como-crear-tus-propios-service-providers/) - 20:50
 
-**Parte 3\. Crear y publicar componentes a Packagist    **
+**Parte 3\. Crear y publicar componentes a Packagist**
 
 En esta tercera parte aprenderás a preparar tu paquete para compartirlo a la comunidad en [Packagist.org](https://packagist.org/)
 
