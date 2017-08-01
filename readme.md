@@ -38,10 +38,10 @@ En esta segunda parte, aprenderemos desde cero el concepto y la implementación 
 
 En esta tercera parte aprenderás a preparar tu paquete para compartirlo a la comunidad en [Packagist.org](https://packagist.org/).
 
-*   [Creación de un paquete con Composer y PHPUnit](https://styde.net/creacion-de-un-paquete-con-composer-y-phpunit/) - 14:03
-*   [Uso de repositorios locales con Composer](https://styde.net/uso-de-repositorios-locales-con-composer/) - 14:52
-*   [Publicación de paquetes con GitHub, Composer y Packagist](https://styde.net/publicacion-de-paquetes-con-github-composer-y-packagist/) - 16:03
-*   [Integración continua con Travis CI, PHPUnit y GitHub](https://styde.net/integracion-continua-con-travis-ci-phpunit-y-github/) - 13:42
+*   [19\.Creación de un paquete con Composer y PHPUnit](https://styde.net/creacion-de-un-paquete-con-composer-y-phpunit/) - 14:03
+*   [20\.Uso de repositorios locales con Composer](https://styde.net/uso-de-repositorios-locales-con-composer/) - 14:52
+*   [21\.Publicación de paquetes con GitHub, Composer y Packagist](https://styde.net/publicacion-de-paquetes-con-github-composer-y-packagist/) - 16:03
+*   [22\.Integración continua con Travis CI, PHPUnit y GitHub](https://styde.net/integracion-continua-con-travis-ci-phpunit-y-github/) - 13:42
 
 Este curso se encuentra en progreso.
 
