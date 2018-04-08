@@ -2,10 +2,17 @@
   "autoload": {
     "psr-4": {
       "Styde\\": "src/"
-    }
+    },
+    "files": [
+      "bootstrap/helpers.php"
+    ]
   },
   "require-dev": {
     "phpunit/phpunit": "^4.8",
     "mockery/mockery": "^0.9.4"
+  },
+  "require": {
+    "filp/whoops": "^1.1",
+    "styde/container": "^0.1"
   }
 }

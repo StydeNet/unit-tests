@@ -12,7 +12,7 @@ class AccessHandler
     /**
      * @param \Styde\AuthenticatorInterface $auth
      */
-    public function __construct(Authenticator $auth)
+    public function __construct(AuthenticatorInterface $auth)
     {
         $this->auth = $auth;
     }
