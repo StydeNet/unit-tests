@@ -17,9 +17,11 @@ class AccessHandler
         $this->auth = $auth;
     }
 
-    public function check($role)
+    public function check($roles)
     {
-        return $this->auth->check() && $this->auth->user()->role === $role;
+        $role = is_array($roles) ? in_array($this->auth->user()->role, $roles) : in_array($this->auth->user()->role, explode('|', $roles));
+        
+        return $this->auth->check() && ($role);
     }
 
 }
